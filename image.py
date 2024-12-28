@@ -43,8 +43,9 @@ def set_background(image_path):
         st.markdown(css, unsafe_allow_html=True)
 
 # Set the background image
-set_background(r"C:\Users\short\OneDrive\Pictures\Saved Pictures\download (2).jpg")
-
+#set_background(r"C:\Users\short\OneDrive\Pictures\Saved Pictures\download (2).jpg")
+#https://github.com/ravindranath8/data-analysis/blob/main/download%20(2).jpg
+set_background(https://github.com/ravindranath8/data-analysis/blob/main/download%20(2).jpg)
 # Define categories and tools
 categories = [
     "Data Visualization", "Data Manipulation", "Statistical Analysis",
