@@ -25,27 +25,33 @@ st.markdown("""
 """, unsafe_allow_html=True)
 
 # Set background image
-def set_background(image_path):
-    with open(image_path, "rb") as image_file:
-        encoded_string = base64.b64encode(image_file.read()).decode()
-        css = f"""
-        <style>
-        .stApp {{
-            background-image: url("data:image/png;base64,{encoded_string}");
-            background-size: cover;
-            background-position: center center;
-            background-repeat: no-repeat;
-            background-attachment: fixed;
-            height: 100vh;
-        }}
-        </style>
-        """
-        st.markdown(css, unsafe_allow_html=True)
+import streamlit as st
+
+# Background image URL
+background_image_url = "https://raw.githubusercontent.com/ravindranath8/data-analysis/main/download%20(2).jpg"
+
+# Set background image using custom CSS
+st.markdown(
+    f"""
+    <style>
+    .stApp {{
+        background-image: url("{background_image_url}");
+        background-size: cover;
+    }}
+    </style>
+    """,
+    unsafe_allow_html=True
+)
+
+# Your Streamlit app content
+st.title("Streamlit with GitHub Image Background")
+st.write("This is an example of setting a background image from GitHub.")
+
 
 # Set the background image
 #set_background(r"C:\Users\short\OneDrive\Pictures\Saved Pictures\download (2).jpg")
 #https://github.com/ravindranath8/data-analysis/blob/main/download%20(2).jpg
-set_background(https://github.com/ravindranath8/data-analysis/blob/main/download%20(2).jpg)
+#set_background(https://github.com/ravindranath8/data-analysis/blob/main/download%20(2).jpg)
 # Define categories and tools
 categories = [
     "Data Visualization", "Data Manipulation", "Statistical Analysis",
