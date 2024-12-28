@@ -9,3 +9,5 @@ nltk
 scipy
 scikit-learn
 requests==2.32.3
+polars==1.18.0
+
